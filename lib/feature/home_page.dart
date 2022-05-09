@@ -58,15 +58,15 @@ class _HomePageState extends State<HomePage> {
         steps: <Step>[
           for (var i = 0; i < steps.length; i++)
             Step(
-              isActive: currentStep >= i,
-              state: currentStep == i
-                  ? StepState.editing
-                  : currentStep < i
-                      ? StepState.disabled
-                      : StepState.complete,
-              content: steps[i],
-              title: const SizedBox.shrink(),
-            ),
+                isActive: currentStep >= i,
+                state: currentStep == i
+                    ? StepState.editing
+                    : currentStep < i
+                        ? StepState.disabled
+                        : StepState.complete,
+                content: steps[i],
+                title: const SizedBox.shrink(),
+                subtitle: const SizedBox()),
         ],
       ),
     );
