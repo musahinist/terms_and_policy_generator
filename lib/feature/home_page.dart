@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:terms_and_policy_generator/core/widget/ui/form/date_form_field.dart';
+import 'package:terms_and_policy_generator/core/widget/ui/form/form_label.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -72,6 +74,13 @@ class HomePage extends StatelessWidget {
                     child: Text(value),
                   );
                 }).toList(),
+                onChanged: (String? value) {
+                  print(value);
+                },
+              ),
+              DateFormField(
+                label:
+                    const FormLabel("Policy effective date", Label.mandatory),
                 onChanged: (String? value) {
                   print(value);
                 },
